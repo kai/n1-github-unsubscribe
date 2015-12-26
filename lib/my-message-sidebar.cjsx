@@ -31,7 +31,17 @@ class MyMessageSidebar extends React.Component
   componentWillUnmount: =>
     @unsubscribe()
 
+  render: =>
+    if @state.contact
+      # content = @_renderContent()
+      content = "Hello"
+    else
+      # content = @_renderPlaceholder()
+      content = "World"
 
+    <div className="my-message-sidebar">
+      {content}
+    </div>
 
   _renderContent: =>
     # Want to include images or other static assets in your components?
