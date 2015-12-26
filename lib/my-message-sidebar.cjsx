@@ -33,9 +33,11 @@ class MyMessageSidebar extends React.Component
 
   render: =>
     if @state.contact
-      content = @_renderContent()
+      # content = @_renderContent()
+      content = "Hello"
     else
-      content = @_renderPlaceholder()
+      # content = @_renderPlaceholder()
+      content = "World"
 
     <div className="my-message-sidebar">
       {content}
